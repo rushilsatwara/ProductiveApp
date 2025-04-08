@@ -1,0 +1,10 @@
+- ✨ **Creating Categories:** Organize your tasks by creating categories that make sense to you.
+- ✅ **Creating Tasks in Categories:** Add tasks within categories for a structured approach.
+- 📋 **Sorting of Tasks:** Easily categorize your tasks as completed or unfulfilled.
+- 📦 **Category Archiving:** Keep your workspace clean by archiving categories.
+- 📊 **View Statistics:** Gain insights into your productivity with task statistics.
+- 📆 **View Tasks by Day:** Stay on top of daily tasks and deadlines.
+- 📝 **Editing:** Make changes to your tasks with ease.
+- 🔔 **Notifications:** Receive reminders to never miss an important task.
+- 🗑️ **Delete All Data:** Clear your slate with a single button.
+- 🎨 **Beautiful Design**
