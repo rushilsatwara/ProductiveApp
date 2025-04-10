@@ -123,22 +123,21 @@ class Onboard {
     required this.description,
   });
 }
-
 final List<Onboard> data = [
   Onboard(
     image: 'assets/images/Task.png',
-    title: 'title1'.tr,
-    description: 'subtitle1'.tr,
+    title: 'Stay Organized'.tr,
+    description: 'Easily categorize and complete your tasks step by step.'.tr,
   ),
   Onboard(
     image: 'assets/images/Design.png',
-    title: 'title2'.tr,
-    description: 'subtitle2'.tr,
+    title: 'Boost Productivity'.tr,
+    description: 'Plan, track, and optimize your work effortlessly.'.tr,
   ),
   Onboard(
     image: 'assets/images/Feedback.png',
-    title: 'title3'.tr,
-    description: 'subtitle3'.tr,
+    title: 'Achieve More'.tr,
+    description: 'Stay motivated and accomplish your goals faster.'.tr,
   ),
 ];
 

@@ -10,6 +10,21 @@ import 'package:zest/app/ui/todos/widgets/todos_action.dart';
 import 'package:zest/theme/theme_controller.dart';
 import 'package:zest/main.dart';
 
+// How Everything Works Step-by-Step
+// App Starts → initState() runs → Sets tabIndex based on settings.defaultScreen.
+
+// IndexedStack Shows pages[tabIndex] (defaults to first tab).
+
+// User Clicks Bottom Navigation → changeTabIndex(index) updates tabIndex → IndexedStack changes the page.
+
+// User Swipes Left/Right → onSwipe() updates tabIndex → IndexedStack changes the page.
+
+// User Clicks FAB (+ button)
+
+// If on Tasks Page → Opens TasksAction() modal.
+
+// If on Todos Page → Opens TodosAction() modal.
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -45,12 +60,16 @@ class _HomePageState extends State<HomePage> {
     return ['categories', 'allTodos', 'calendar'];
   }
 
-
   @override
   void initState() {
     super.initState();
     allScreens = getScreens();
-    tabIndex = allScreens.indexOf(allScreens.firstWhere((element) => (element == settings.defaultScreen), orElse: () => allScreens[0]));
+    tabIndex = allScreens.indexOf(
+      allScreens.firstWhere(
+        (element) => (element == settings.defaultScreen),
+        orElse: () => allScreens[0],
+      ),
+    );
   }
 
   @override

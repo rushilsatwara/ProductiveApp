@@ -3,6 +3,40 @@ import 'package:isar/isar.dart';
 
 part 'db.g.dart';
 
+// ### **Database Setup & Collections**
+// 1. **Uses Isar Database:**
+//    - `import 'package:isar/isar.dart';` for database operations.
+//    - `part 'db.g.dart';` is for Isar-generated code.
+
+// 2. **Settings Collection (`@collection class Settings`)**
+//    - Stores user preferences like theme, time format, language, default screen, etc.
+//    - `onboard` (bool) determines if onboarding is completed.
+//    - `defaultScreen` (String) sets the initial screen (default: 'categories').
+
+// 3. **Tasks Collection (`@collection class Tasks`)**
+//    - Represents a task with:
+//      - `title` (String) and `description` (String).
+//      - `taskColor` (int) for color coding.
+//      - `archive` (bool) to mark as archived.
+//      - `index` (int?) for ordering.
+//    - **Relationship:**
+//      - `todos` (IsarLinks<Todos>) → Links multiple `Todos` to a `Task`.
+
+// 4. **Todos Collection (`@collection class Todos`)**
+//    - Represents individual to-dos with:
+//      - `name`, `description`, `createdTime`, `done` (completion status).
+//      - `todoCompletionTime`, `todoCompletedTime` (DateTime).
+//      - `fix` (bool) → Indicates pinned tasks.
+//      - `priority` (enum) → Sets priority (high, medium, low, none).
+//      - `tags` (List<String>) → Labels for categorization.
+//    - **Relationship:**
+//      - `task` (IsarLink<Tasks>) → Links a `Todo` to a parent `Task`.
+
+// 5. **Priority Enum (`enum Priority`)**
+//    - Defines task priority levels:
+//      - **High (Red), Medium (Orange), Low (Green), None**.
+//    - Each priority has a `name` and optional `color`.
+
 @collection
 class Settings {
   Id id = Isar.autoIncrement;

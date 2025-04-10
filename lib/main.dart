@@ -16,7 +16,7 @@ import 'package:isar/isar.dart';
 import 'package:zest/theme/theme_controller.dart';
 import 'package:zest/app/utils/device_info.dart';
 import 'app/data/db.dart';
-import 'translation/translation.dart';
+// import 'translation/translation.dart';
 import 'package:timezone/data/latest_all.dart' as tz;
 import 'package:timezone/timezone.dart' as tz;
 
@@ -32,24 +32,6 @@ bool isImage = true;
 String timeformat = '24';
 String firstDay = 'monday';
 Locale locale = const Locale('en', 'US');
-
-final List appLanguages = [
-  {'name': 'العربية', 'locale': const Locale('ar', 'AR')},
-  {'name': 'Deutsch', 'locale': const Locale('de', 'DE')},
-  {'name': 'English', 'locale': const Locale('en', 'US')},
-  {'name': 'Español', 'locale': const Locale('es', 'ES')},
-  {'name': 'Français', 'locale': const Locale('fr', 'FR')},
-  {'name': 'Italiano', 'locale': const Locale('it', 'IT')},
-  {'name': '한국어', 'locale': const Locale('ko', 'KR')},
-  {'name': 'فارسی', 'locale': const Locale('fa', 'IR')},
-  {'name': 'Polski', 'locale': const Locale('pl', 'PL')},
-  {'name': 'Русский', 'locale': const Locale('ru', 'RU')},
-  {'name': 'Tiếng việt', 'locale': const Locale('vi', 'VN')},
-  {'name': 'Türkçe', 'locale': const Locale('tr', 'TR')},
-  {'name': '中文(简体)', 'locale': const Locale('zh', 'CN')},
-  {'name': '中文(繁體)', 'locale': const Locale('zh', 'TW')},
-  {'name': 'Português', 'locale': const Locale('pt', 'PT')},
-];
 
 List<String> allScreens = [];
 
@@ -282,15 +264,15 @@ class _MyAppState extends State<MyApp> {
               GlobalWidgetsLocalizations.delegate,
               GlobalCupertinoLocalizations.delegate,
             ],
-            translations: Translation(),
+            // translations: Translation(),
             locale: locale,
             fallbackLocale: const Locale('en', 'US'),
-            supportedLocales:
-                appLanguages.map((e) => e['locale'] as Locale).toList(),
+            // supportedLocales:
+            //     appLanguages.map((e) => e['locale'] as Locale).toList(),
             debugShowCheckedModeBanner: false,
             home: settings.onboard ? const HomePage() : const OnBording(),
             builder: EasyLoading.init(),
-            title: 'Zest',
+            title: 'zest',
           );
         },
       ),

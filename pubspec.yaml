@@ -1,4 +1,4 @@
-name: Not A Virus
+name: zest
 description: Task management application.
 
 publish_to: "none"
@@ -46,6 +46,7 @@ dependencies:
     version: ^3.1.8
     hosted: https://pub.isar-community.dev/
   android_intent_plus: ^5.3.0
+  shared_preferences: ^2.5.3
 
 dev_dependencies:
   flutter_test:
